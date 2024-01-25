@@ -1,4 +1,4 @@
-module rollKeys
+module github.com/FPNL/RollKeys
 
 go 1.21
 
