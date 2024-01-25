@@ -14,7 +14,7 @@ and use them in rotation.
 
 install
 ```bash
-go install github.com/FPNL/RollKeys
+go get github.com/FPNL/RollKeys
 ```
 
 usage
