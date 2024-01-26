@@ -26,7 +26,7 @@ func NewRotationalSlice[T any](slice []T, r int, options ...func(*RotationalSlic
 
 	c := &RotationalSlice[T]{
 		s:            ls,
-		pickStrategy: DefaultPickStrategy[T],
+		pickStrategy: DefaultPickStrategy[T](0),
 	}
 
 	for _, option := range options {

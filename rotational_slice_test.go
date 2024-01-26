@@ -13,10 +13,10 @@ import (
 func TestRotationalSlice_Get(t *testing.T) {
 	givenAPIKeys := []string{"a", "b"}
 	givenNow := time.Now()
-	givenRequestTimes := 100
-	givenRate := 5
+	givenRequestTimes := 50
+	givenRate := 2
 
-	expectDuration := (givenRequestTimes / (len(givenAPIKeys) * givenRate)) - 1
+	expectDuration := givenRequestTimes / (len(givenAPIKeys) * givenRate)
 
 	keys, err := NewRotationalSlice(givenAPIKeys, givenRate)
 	require.NoError(t, err)
