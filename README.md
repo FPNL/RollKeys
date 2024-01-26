@@ -64,3 +64,14 @@ func main() {
 	}
 }
 ```
+
+# user-defined pick strategy
+What if all keys are fully loaded? The default pick strategy is to use them in rotation.
+You can define your strategy by `WithPickStrategy`
+```go
+var opts = []func(*RotationalSlice[string]){
+	WithPickStrategy[string](YOUR_STRATEGY),
+}
+	
+keys, err := NewRotationalSlice(givenAPIKeys, givenRate, opts...)
+```
